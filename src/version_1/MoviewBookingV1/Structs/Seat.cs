@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MovieBookingV1.Structs
 {
-    internal struct Seat
+    public struct Seat
     {
         public char Row { get; set; }
         public int Number { get; set; }

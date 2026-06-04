@@ -1,0 +1,29 @@
+# Movie Ticket Booking System — Version 2 🎬
+
+This project is an extension of the foundational Movie Ticket Booking System built for the **Route Academy** backend track. Version 2 focuses heavily on advanced data protection using strict **Encapsulation**, custom property validation, **Indexers** for custom collection management, and **Static Members** to manage application-wide tracking states.
+
+---
+
+## 🛠️ Key Architectural Implementations
+
+### 1. Refactored Encapsulation & Data Validation (`Models/Ticket.cs`)
+The core `Ticket` class has been refactored to prevent invalid object states. Fields are backed by public properties carrying explicit business rules:
+* **`MovieName`:** Cannot be set to null or empty. If an invalid value is supplied, the system retains the previously valid state.
+* **`Price`:** Must strictly be greater than 0. If an invalid or negative value is set, the previous value is retained.
+* **`PriceAfterTax`:** A read-only calculated property that dynamically computes and returns the base price with a 14% tax applied (calculated on-the-fly, not stored).
+
+### 2. Global State Tracking via Static Members
+* **`ticketCounter`:** A private static field initialized to `0` that keeps a running tally of all tickets generated globally across the application execution.
+* **`TicketId`:** An automatically assigned unique identifier assigned in the constructor using the current incremented value of `ticketCounter`.
+* **`GetTotalTicketsSold()`:** A static method exposing the total quantity of tickets processed securely.
+
+### 3. Collection Management via Indexers (`Models/Cinema.cs`)
+A dedicated manager class representing a theater hall configuration handling up to **20 tickets** using an internal private array.
+* **Smart Indexer:** Allows direct retrieval and assignment of tickets using array syntax (`cinema[0] = myTicket`). Features safe boundary checks: if indices are out of range, getters return `null` and setters fail safely without breaking execution.
+* **Targeted Search (`GetMovieByMovieName`)** Scans the internal matrix and returns the first instance matching a movie string criteria.
+* **Dynamic Insertion (`AddTicket`)** Iterates over the 20 slots and inserts a ticket into the first vacant (`null`) space found, returning boolean flags indicating success status.
+
+### 4. Static Utility Class (`Helpers/BookingHelper.cs`)
+An uninstantiated global helper containing cross-cutting helper workflows:
+* **`CalcGroupDiscount`:** Dynamically flags purchases of **5 or more tickets**, slicing an automatic 10% discount off the cumulative total.
+* **`GenerateBookingReference`:** Produces a thread-safe incremental reference tag (e.g., `"BK-1"`, `"BK-2"`) powered by internal static sequencing counters.

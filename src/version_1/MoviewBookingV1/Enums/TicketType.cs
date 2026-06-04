@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MovieBookingV1.Enums
 {
-    internal enum TicketType
+    public enum TicketType
     {
         Standard,
         VIP,

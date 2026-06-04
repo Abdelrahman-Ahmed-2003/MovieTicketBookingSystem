@@ -1,1 +1,4 @@
-<Solution />
+<Solution>
+  <Project Path="src/version_1/MoviewBookingV1/MoviewBookingV1.csproj" />
+  <Project Path="src/version_2/MovieBookingV2/MovieBookingV2.csproj" />
+</Solution>
