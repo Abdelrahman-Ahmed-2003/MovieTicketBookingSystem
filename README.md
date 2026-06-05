@@ -1,28 +1,26 @@
-# MovieTicketBookingSystem
-A multi-version Movie Ticket Booking System built in C# and .NET. The project dynamically evolves through each version to demonstrate clean architecture and the progressive implementation of advanced Object-Oriented Programming (OOP) principles.
-# Movie Ticket Booking System 🎬
+# Movie Ticket Booking System — Full OOP Lifecycle 🎬
 
-This repository showcases a structured, multi-version console application built as part of the Route Academy backend track. The core objective of this project is to demonstrate the progressive application of Object-Oriented Programming (OOP) principles through an evolving software architecture.
+> **📌 Notice & Attribution**
+> This project is developed as part of the backend engineering track curriculum at **Route Academy**. The assignments, requirements, and foundational problem statements were designed by Route Academy instructors and have been cleared for public portfolio sharing by our mentor. 
+> 
+> Continuous reference materials, assignment sheets, and foundational structure schemas were adapted from the public student repository curated by **[Mohamed Ramadan (mohamedramadan567)](https://github.com/mohamedramadan567)**.
 
 ---
 
-## 🏗️ OOP Evolution Plan By Version
+Welcome to the comprehensive repository of the **Movie Ticket Booking System**. This portfolio demonstrates a modular console application built across six distinct development phases as part of the **Route Academy** Backend Engineering Track (.NET). 
 
-### 🔹 Version 1: Encapsulation & Foundational Architecture
-Focuses on defining the domain models and strictly protecting data integrity.
-* **Encapsulation:** All fields are kept private, exposing data only through clean public properties with custom validation logic.
-* **Data Organization:** Features separate folders for `Models`, `Enums`, and `Structs` to separate concerns neatly.
+The project outlines the complete evolution of a software application, refactoring from basic data types up to a fully decoupled, enterprise-ready, contract-driven architecture using advanced C# and .NET mechanics.
 
-### 🔹 Version 2: Inheritance & Specialized Classes
-Expands the domain to handle advanced booking types without repeating code.
-* **Inheritance:** Introduces a base `Ticket` class, with specialized classes like `VIPTicket` and `StandardTicket` inheriting common functionality.
-* **Code Reusability:** Eliminates code duplication by sharing common traits via parent classes.
+---
 
-### 🔹 Version 3: Polymorphism & Dynamic Behavior
-Enables the system to process different ticket types seamlessly at runtime.
-* **Polymorphism:** Implements `virtual` and `override` methods for dynamic pricing calculations and discount logic.
-* **Interfaces / Abstract Classes:** Introduces abstractions to decouple the booking manager from concrete ticket implementations.
+## 📈 Portfolio Evolution & Session Roadmap
 
-### 🔹 Version 4: Abstraction & Clean Interfaces
-Hides complex system workflows behind clean, simple contracts.
-* **Abstraction:** Implements service interfaces (e.g., `IBookingService`) so user interactions are completely isolated from internal database or business logic workflows.
+```text
+MovieTicketBookingSystem/
+│
+├── 🔹 MovieBookingV1  --> Core Foundations: Primitive structures & basic classes
+├── 🔹 MovieBookingV2  --> Encapsulation: Backing fields, private setters & auto-properties
+├── 🔹 MovieBookingV3  --> Composition: Lifecycles, dependencies, and nested component objects
+├── 🔹 MovieBookingV4  --> Polymorphism: Runtime overriding (virtual) & compile-time overloading
+├── 🔹 MovieBookingV5  --> Interfaces: Abstractions, decoupled helpers, and heap deep-copying
+└── 🔹 MovieBookingV6  --> Advanced Architecture: Abstract blockers, partial files & extensions
