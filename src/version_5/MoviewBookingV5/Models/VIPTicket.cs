@@ -21,7 +21,7 @@ namespace MovieBookingV5.Models
 
         }
 
-        public override Ticket Clone()
+        public override object Clone()
         {
             return new VIPTicket(this.LoungeAccess, this.ServiceFees, this.MovieName ?? "Unknown", this.Price);
         }

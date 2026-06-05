@@ -4,4 +4,5 @@
   <Project Path="src/version_3/MovieBooking3/MovieBooking3.csproj" />
   <Project Path="src/version_4/MovieBookingV4/MovieBookingV4.csproj" />
   <Project Path="src/version_5/MoviewBookingV5/MoviewBookingV5.csproj" />
+  <Project Path="src/version_6/MovieBookingV6/MovieBookingV6.csproj" Id="bac201a4-ec57-4daa-a256-bef58939c0ba" />
 </Solution>
